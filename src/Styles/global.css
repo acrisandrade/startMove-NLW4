@@ -4,16 +4,16 @@
     box-sizing: border-box;
 }
 :root {
-    --white: #FFF;
+    --white: rgba(228, 190, 229, 0.336);
     --background: #F2F3F5;
     --gray-line: #DCDDE0;
-    --text: #666666;
+    --text: #2e2c2c;
     --text-highlight: #B3B9FF;
     --title: #2E384D;
     --red: #E83F5B;
     --green: #f53de580;
     --roxo: #f53de68e;
-    --dark: #f53de673;
+    --dark: hsla(47, 92%, 64%, 0.733);
     --blue-twitter: #2AA9E0;
   }
 
@@ -50,42 +50,9 @@ a{
     max-width: 992px;
     margin: 0 auto;
     padding: 2.5rem 2rem;
-
+    
     display: flex;
     flex-direction: column;
 }
 
-.experience-bar{
-    display: flex;
-    align-items: center;
-}
-
-.experience-bar span{
-    font-size: 1rem;
-
-}
-
-.experience-bar > div{
-flex: 1;
-height: 4px;
-border-radius: 4px ;
-background: var(--gray-line);
-margin: 0 1.5rem;
-position: relative;
-}
-
-.experience-bar > div>div{
-    height: 4px;
-    border-radius: 4px;
-    background: var(--green);
-
-
-}
-
-span.current-experience{
-    position: absolute;
-    top: 12px;
-    transform: translateX(-50%);
-
-}
 

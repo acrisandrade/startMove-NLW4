@@ -37,16 +37,18 @@
 
 .startCountdownButton{
     width: 100%;
-    height: 5rem;
-
+    height: 3rem;
     margin-top: 2rem;
     display:flex ;
     align-items: center;
     justify-content: center;
     border: 0;
     border-radius: 5px;
+    font-size: 1rem;
+    font-weight: 600;
+    transition:  filter 0.2s;
 
-    background: var(--roxo);
+    background: #F8D34F;
     color: #141414;
 
     font-size: 1.25rem;
@@ -54,6 +56,26 @@
 
     transition: background-color 0.2s; 
 }
-.startCountdownButton:hover{
+.startCountdownButton:not(:disabled):hover{
     background: var(--dark);
+   
+}
+.startCountdownButtonActive{
+    background: hsla(47, 92%, 64%, 0.733);
+    color: var(--title);
+    
+}
+
+.startCountdownButtonActive:not(:disabled):hover{
+    background: #F8D34F;
+    color: black;
+    
+}
+
+.startCountdownButton:disabled{
+    background: #b9b6aa;
+    color:var(--text);
+    cursor: not-allowed;
+   
+
 }

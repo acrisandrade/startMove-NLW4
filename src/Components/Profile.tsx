@@ -7,7 +7,7 @@ export function Profile() {
             <div>
                 <strong>Simplifica.Code</strong>
                 <p>
-                    <img src="icons/level.svg" alt="Level"/>
+                    <img src="icons/nivel.svg" alt="Level"/>
                     Level 1
                 </p>
             </div>

@@ -4,6 +4,7 @@ import { ExperienceBar } from "../Components/experienceBar";
 import{ Profile } from "../Components/Profile";
 import{ Countdown } from "../Components/Countdown";
 import styles from '../Styles/Pages/Home.module.css';
+import { ChallengeBox } from '../Components/ChallengeBox';
 
 export default function Home() {
   return (
@@ -19,7 +20,7 @@ export default function Home() {
         <Countdown/>
         </div>
         <div>
-
+          <ChallengeBox/>
         </div>
       </section>
     </div>
