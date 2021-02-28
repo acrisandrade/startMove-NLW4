@@ -8,6 +8,8 @@ import styles from '../Styles/Pages/Home.module.css';
 import { ChallengeBox } from '../Components/ChallengeBox';
 import { CountdownProvider } from '../Context/CountdownContext';
 import{ChallengesProvider} from '../Context/ChallengesContext';
+import { Inicial } from '../Components/Home';
+
 
 
 interface HomeProps{
@@ -19,14 +21,17 @@ interface HomeProps{
 export default function Home(props:HomeProps) {
   
   return (
+    
     <ChallengesProvider level={props.level}
     currentExperience={props.currentExperience}
     challengeCompleted={props.challengeCompleted}
     >
+      
       <div className= {styles.container}>
         <Head>
           <title>Início | Start Move </title>
         </Head>
+        
         <ExperienceBar />
         
         <CountdownProvider>
@@ -43,6 +48,8 @@ export default function Home(props:HomeProps) {
         </CountdownProvider>
       </div>    
     </ChallengesProvider>
+  
+    
   )
 }
 

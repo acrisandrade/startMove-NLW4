@@ -1,0 +1,65 @@
+.overlay{
+    background: rgba(0, 0, 0, 0.8) ;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+.container{
+    background:hsl(259, 74%, 62%);
+ 
+    padding: 5.5rem 5.5rem;
+    border-radius: 5px;
+    text-align: center;
+    position: relative;
+    
+}
+
+.container header{
+    font-size: 8.75rem;
+    font-weight: 600;
+    color: #F8D34F;
+    background-size: contain;
+}
+
+.container strong{
+    font-size:2.25rem;
+    color:var(--title);
+}
+
+.container p{
+    font-size: 1.25;
+    color: var(--text);
+    margin-top: 0.25rem;
+}
+
+.container button{
+    width: 45%;
+    height: 3rem;
+    margin-top: 2rem;
+    
+    align-items: center;
+    justify-content: center;
+    border: 0;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: 600;
+    transition:  filter 0.2s;
+
+    background: #F8D34F;
+    color: #141414;
+
+    font-size: 1.25rem;
+    font-weight: 600;
+
+    transition: background-color 0.2s; 
+
+}

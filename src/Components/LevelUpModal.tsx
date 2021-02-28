@@ -3,10 +3,10 @@ import { ChallengsContext } from '../Context/ChallengesContext';
 import Styles from '../Styles/components/LevelUpModal.module.css';
 
 export function LevelUpModal() {
-    const{ level,closeLevelUp} = useContext(ChallengsContext)
+    const{closeLevelUp, level} = useContext(ChallengsContext)
 
     return (
-    <div className={Styles.overlay}>
+        <div className={Styles.overlay}>
         <div className={Styles.container}>
             <header>{level}</header>
             <strong>Parabéns</strong>

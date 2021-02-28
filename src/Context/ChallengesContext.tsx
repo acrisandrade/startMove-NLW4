@@ -2,7 +2,7 @@ import {createContext, useState, ReactNode, useEffect} from 'react';
 import Challenges from '../../Challenges.json'
 import Cookies from 'js-cookie';
 import { LevelUpModal } from '../Components/LevelUpModal';
-
+import {Inicial} from '../Components/Home'
 
 interface desafio{
     type: 'body' | 'eye';
@@ -21,8 +21,10 @@ interface ChallengesContextData{
     activeChallenge:desafio;
     CompleteChallenge:()=>void;
     closeLevelUp:()=>void;
+ 
     
 }
+
 
 interface ChallengesContextProps{
     children:ReactNode;
@@ -30,7 +32,8 @@ interface ChallengesContextProps{
     currentExperience:number
     challengeCompleted:number
   }
-  
+
+
 
 export const ChallengsContext = createContext({} as ChallengesContextData);
 
@@ -44,7 +47,10 @@ export function ChallengesProvider({
     const[challengesCompleted, setChallengesCompleted] = useState(rest.challengeCompleted ?? 0);
     const[activeChallenge, setActiveChallenge] = useState(null);
     const[isLevelUpModalOpen,SetIsLevelModalOpen] = useState(false);
+    const[LoginModalOpen,SetIsLoginModalOpen] = useState(false);
     const experienceToNextLevel = Math.pow((level +1) * 4, 2);
+
+    
 
     useEffect(() => {
         Notification.requestPermission();
@@ -62,6 +68,10 @@ export function ChallengesProvider({
         setLevel(level+1);
         SetIsLevelModalOpen(true);
     }
+    function login(){
+        SetIsLoginModalOpen(true) ;   
+     }
+      
 
     function closeLevelUp(){
         SetIsLevelModalOpen(false);
@@ -105,7 +115,7 @@ export function ChallengesProvider({
     }
 
     return(
-        <ChallengsContext.Provider value={{level ,
+       <ChallengsContext.Provider value={{level ,
         currentExperience,
         challengesCompleted, 
         activeChallenge,
@@ -114,10 +124,10 @@ export function ChallengesProvider({
         resetChallenge,
         experienceToNextLevel,  
         CompleteChallenge,   
-        closeLevelUp,   
+        closeLevelUp,  
         }}
-        >   
-        {children}    
+        > 
+        {children}        
 
         {isLevelUpModalOpen && <LevelUpModal/>}
         
